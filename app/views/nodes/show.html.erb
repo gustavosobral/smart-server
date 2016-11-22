@@ -1,0 +1,16 @@
+<section>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <h1>Node #<%= @node.id %></h1>
+        <p><%= @node.uuid %></p>
+        <hr>
+        <div class="data-menu text-left">
+          <%= link_to 'Voltar', root_path, class: 'btn btn-sm btn-danger' %>
+        </div>
+        <%= render 'panel' %>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+</section>

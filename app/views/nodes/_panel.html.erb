@@ -6,20 +6,18 @@
         <thead>
           <tr>
             <th class="text-center">#</th>
-            <th class="text-center">UUID</th>
-            <th></th>
+            <th class="text-center">Temperature</th>
+            <th class="text-center">Luminosity</th>
           </tr>
         </thead>
         <tbody>
-          <% @nodes.each do |node| %>
-          <tr>
-            <td><%= node.id %></td>
-            <td><%= node.uuid %></td>
-            <td>
-              <%= link_to 'Ver', node_path(node), class: 'btn btn-sm btn-success' %>
-            </td>
-          </tr>
-          <% end %>
+        <% @node.data.each do |datum| %>
+            <tr>
+              <td><%= datum.id %></td>
+              <td><%= datum.temperature %></td>
+              <td><%= datum.luminosity %></td>
+            </tr>
+        <% end %>
         </tbody>
       </table>
     </div>
