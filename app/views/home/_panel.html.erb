@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading"></div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center">#</th>
+            <th class="text-center">UUID</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @nodes.each do |node| %>
+          <tr>
+            <td><%= node.id %></td>
+            <td><%= node.uuid %></td>
+            <td><a class="btn btn-sm btn-success" href="#">Ver</a></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
