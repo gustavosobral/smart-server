@@ -10,8 +10,8 @@ module Api
       private
 
       def create_data
-        params[:luminosity].zip(params[:temperature]).each do |luminosity, temperature|
-          @node.data << Datum.new(luminosity: luminosity, temperature: temperature)
+        params[:luminosity].zip(params[:temperature], params[:ppm]).each do |luminosity, temperature, ppm|
+          @node.data.create(luminosity: luminosity, temperature: temperature, ppm: ppm)
         end
       end
     end

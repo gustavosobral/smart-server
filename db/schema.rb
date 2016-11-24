@@ -10,17 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122022043) do
+ActiveRecord::Schema.define(version: 20161124003736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "data", force: :cascade do |t|
     t.integer  "node_id"
-    t.float    "temperature"
-    t.float    "luminosity"
+    t.integer  "temperature"
+    t.integer  "luminosity"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "ppm"
     t.index ["node_id"], name: "index_data_on_node_id", using: :btree
   end
 
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20161122022043) do
     t.string   "uuid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "data_count"
   end
 
   add_foreign_key "data", "nodes"

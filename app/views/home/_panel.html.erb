@@ -16,7 +16,7 @@
           <tr>
             <td><%= node.id %></td>
             <td><%= node.uuid %></td>
-            <td>3</td>
+            <td><%= node.data.size %></td>
             <td>
               <%= link_to 'Ver', node_path(node), class: 'btn btn-sm btn-success' %>
             </td>
