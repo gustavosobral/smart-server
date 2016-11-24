@@ -1,20 +1,18 @@
 <section>
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-12">
-        <h1>Node #<%= @node.id %></h1>
-        <p><%= @node.uuid %></p>
-        <hr>
-        <div class="row data-menu">
-          <div class="col-lg-2 text-left">
-            <%= link_to 'Voltar', root_path, class: 'btn btn-sm btn-danger' %>
-          </div>
-          <div class="col-lg-10 text-right">
-            <%= paginate @data %>
-          </div>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h1>Node #<%= @node.id %></h1>
+      <p><%= @node.uuid %></p>
+      <hr>
+      <div class="row data-menu">
+        <div class="col-lg-2 text-left">
+          <%= link_to 'Voltar', root_path, class: 'btn btn-sm btn-danger' %>
         </div>
-        <%= render 'panel' %>
+        <div class="col-lg-10 text-right">
+          <%= paginate @data %>
+        </div>
       </div>
+      <%= render 'panel' %>
     </div>
   </div>
 </section>
