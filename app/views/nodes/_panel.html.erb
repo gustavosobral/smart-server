@@ -6,16 +6,20 @@
         <thead>
           <tr>
             <th class="text-center">#</th>
-            <th class="text-center">Temperature</th>
-            <th class="text-center">Luminosity</th>
+            <th class="text-center">Data de criação</th>
+            <th class="text-center">Temperatura (ºC)</th>
+            <th class="text-center">Luminosidade (lx)</th>
+            <th class="text-center">Gás (ppm)</th>
           </tr>
         </thead>
         <tbody>
         <% @data.each do |datum| %>
             <tr>
               <td><%= datum.id %></td>
+              <td><%= time_ago_in_words datum.created_at %></td>
               <td><%= datum.temperature %></td>
               <td><%= datum.luminosity %></td>
+              <td>400</td>
             </tr>
         <% end %>
         </tbody>
